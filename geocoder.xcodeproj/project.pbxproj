@@ -3,20 +3,25 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B43776B425BD06640069FC35 /* BulkUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43776B325BD06640069FC35 /* BulkUploadViewController.swift */; };
 		B43E53FD25B91F1700075765 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E53FC25B91F1700075765 /* AppDelegate.swift */; };
 		B43E53FF25B91F1700075765 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E53FE25B91F1700075765 /* SceneDelegate.swift */; };
 		B43E540125B91F1700075765 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43E540025B91F1700075765 /* ViewController.swift */; };
 		B43E540425B91F1700075765 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E540225B91F1700075765 /* Main.storyboard */; };
 		B43E540625B91F1800075765 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43E540525B91F1800075765 /* Assets.xcassets */; };
 		B43E540925B91F1800075765 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E540725B91F1800075765 /* LaunchScreen.storyboard */; };
-		B43E541225B925B700075765 /* all-adresses.plist in Resources */ = {isa = PBXBuildFile; fileRef = B43E541125B925B700075765 /* all-adresses.plist */; };
+		B4C3C97B25BDFFB500A19CF6 /* Pods_geocoder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FD955A4E1B8B0538315139B3 /* Pods_geocoder.framework */; };
+		B4FC672025BDF82A00B36A28 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FC671F25BDF82A00B36A28 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0029C9E9128D2A1D39A15236 /* Pods-geocoder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geocoder.debug.xcconfig"; path = "Target Support Files/Pods-geocoder/Pods-geocoder.debug.xcconfig"; sourceTree = "<group>"; };
+		9E3CC0F7C1A610FD8EE17737 /* Pods-geocoder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-geocoder.release.xcconfig"; path = "Target Support Files/Pods-geocoder/Pods-geocoder.release.xcconfig"; sourceTree = "<group>"; };
+		B43776B325BD06640069FC35 /* BulkUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BulkUploadViewController.swift; sourceTree = "<group>"; };
 		B43E53F925B91F1700075765 /* geocoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = geocoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B43E53FC25B91F1700075765 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B43E53FE25B91F1700075765 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -25,7 +30,9 @@
 		B43E540525B91F1800075765 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43E540825B91F1800075765 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43E540A25B91F1800075765 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B43E541125B925B700075765 /* all-adresses.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "all-adresses.plist"; sourceTree = "<group>"; };
+		B43E541925BC7DDF00075765 /* geocoder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = geocoder.entitlements; sourceTree = "<group>"; };
+		B4FC671F25BDF82A00B36A28 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		FD955A4E1B8B0538315139B3 /* Pods_geocoder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_geocoder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +40,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4C3C97B25BDFFB500A19CF6 /* Pods_geocoder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C5F26AA4A7956CDA60233EF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0029C9E9128D2A1D39A15236 /* Pods-geocoder.debug.xcconfig */,
+				9E3CC0F7C1A610FD8EE17737 /* Pods-geocoder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		98B84BE56645AA9BB03BE8AC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FD955A4E1B8B0538315139B3 /* Pods_geocoder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B43E53F025B91F1700075765 = {
 			isa = PBXGroup;
 			children = (
 				B43E53FB25B91F1700075765 /* geocoder */,
 				B43E53FA25B91F1700075765 /* Products */,
+				7C5F26AA4A7956CDA60233EF /* Pods */,
+				98B84BE56645AA9BB03BE8AC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +85,16 @@
 		B43E53FB25B91F1700075765 /* geocoder */ = {
 			isa = PBXGroup;
 			children = (
+				B43E541925BC7DDF00075765 /* geocoder.entitlements */,
+				B43776B325BD06640069FC35 /* BulkUploadViewController.swift */,
 				B43E53FC25B91F1700075765 /* AppDelegate.swift */,
 				B43E53FE25B91F1700075765 /* SceneDelegate.swift */,
 				B43E540025B91F1700075765 /* ViewController.swift */,
 				B43E540225B91F1700075765 /* Main.storyboard */,
+				B4FC671F25BDF82A00B36A28 /* InfoViewController.swift */,
 				B43E540525B91F1800075765 /* Assets.xcassets */,
 				B43E540725B91F1800075765 /* LaunchScreen.storyboard */,
 				B43E540A25B91F1800075765 /* Info.plist */,
-				B43E541125B925B700075765 /* all-adresses.plist */,
 			);
 			path = geocoder;
 			sourceTree = "<group>";
@@ -77,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B43E540D25B91F1800075765 /* Build configuration list for PBXNativeTarget "geocoder" */;
 			buildPhases = (
+				30CF7AC19DBA18F8AC063A88 /* [CP] Check Pods Manifest.lock */,
 				B43E53F525B91F1700075765 /* Sources */,
 				B43E53F625B91F1700075765 /* Frameworks */,
 				B43E53F725B91F1700075765 /* Resources */,
+				05F6B109F116D5F1E7D5ECC1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -101,6 +132,7 @@
 				TargetAttributes = {
 					B43E53F825B91F1700075765 = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -127,7 +159,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43E541225B925B700075765 /* all-adresses.plist in Resources */,
 				B43E540925B91F1800075765 /* LaunchScreen.storyboard in Resources */,
 				B43E540625B91F1800075765 /* Assets.xcassets in Resources */,
 				B43E540425B91F1700075765 /* Main.storyboard in Resources */,
@@ -135,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F6B109F116D5F1E7D5ECC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geocoder/Pods-geocoder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-geocoder/Pods-geocoder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-geocoder/Pods-geocoder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30CF7AC19DBA18F8AC063A88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-geocoder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B43E53F525B91F1700075765 /* Sources */ = {
@@ -144,6 +217,8 @@
 				B43E540125B91F1700075765 /* ViewController.swift in Sources */,
 				B43E53FD25B91F1700075765 /* AppDelegate.swift in Sources */,
 				B43E53FF25B91F1700075765 /* SceneDelegate.swift in Sources */,
+				B43776B425BD06640069FC35 /* BulkUploadViewController.swift in Sources */,
+				B4FC672025BDF82A00B36A28 /* InfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -275,9 +350,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -287,9 +363,12 @@
 		};
 		B43E540E25B91F1800075765 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0029C9E9128D2A1D39A15236 /* Pods-geocoder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = geocoder/geocoder.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7PTT3CN33;
@@ -298,9 +377,13 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jnknv.geocoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -308,9 +391,12 @@
 		};
 		B43E540F25B91F1800075765 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E3CC0F7C1A610FD8EE17737 /* Pods-geocoder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = geocoder/geocoder.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = F7PTT3CN33;
@@ -319,9 +405,12 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = jnknv.geocoder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -2,9 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Apple Austin</key>
-	<string>12545 Riata Vista Cir, Austin, TX 78727</string>
-	<key>Apple California</key>
-	<string>2511 Laguna Blvd, Elk Grove, CA 95758</string>
+	<key>IDEDidComputeMac32BitWarning</key>
+	<true/>
 </dict>
 </plist>

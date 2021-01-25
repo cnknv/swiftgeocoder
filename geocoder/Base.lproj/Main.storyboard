@@ -1,24 +1,284 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nYY-yJ-aGS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Bulk-->
+        <scene sceneID="Tbl-L6-NqW">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="gNX-pf-PGi" customClass="BulkUploadViewController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rPX-XX-aae">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9e-IM-zBf">
+                                <rect key="frame" x="32" y="166" width="354" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4fl-Bw-McO"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Select File"/>
+                                <connections>
+                                    <action selector="selectFileButton:" destination="gNX-pf-PGi" eventType="touchUpInside" id="4zw-Xz-fCh"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geocoder logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NQi-cb-g7Q">
+                                <rect key="frame" x="109" y="58" width="208" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="7RY-WG-gVC"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gqL-Tj-GFV">
+                                <rect key="frame" x="32" y="290" width="354" height="438"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1VS-eO-qjH">
+                                <rect key="frame" x="30" y="743" width="354" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aS9-8g-kEL"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Copy coordinates"/>
+                                <connections>
+                                    <action selector="copyCoordinates:" destination="gNX-pf-PGi" eventType="touchUpInside" id="v70-ZW-9Gc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please select  a .cvs file" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbh-9M-rnC">
+                                <rect key="frame" x="77" y="234" width="220" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ah-Qv-k4c">
+                                <rect key="frame" x="310" y="245.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="MVb-R8-6LL"/>
+                                    <constraint firstAttribute="width" constant="25" id="qHj-A0-7Wm"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.70554184909999995" blue="0.89131349329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" red="0.0" green="0.70554184909999995" blue="0.89131349329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="leB-lc-x5W" kind="show" id="qOI-2A-Mo4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZaP-Wi-4XM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1VS-eO-qjH" firstAttribute="centerX" secondItem="rPX-XX-aae" secondAttribute="centerX" id="0Vn-Gg-eJZ"/>
+                            <constraint firstItem="u9e-IM-zBf" firstAttribute="top" secondItem="NQi-cb-g7Q" secondAttribute="bottom" constant="8" symbolic="YES" id="15Q-6J-D5L"/>
+                            <constraint firstItem="u9e-IM-zBf" firstAttribute="leading" secondItem="ZaP-Wi-4XM" secondAttribute="leading" constant="32" id="839-eb-WdU"/>
+                            <constraint firstItem="ZaP-Wi-4XM" firstAttribute="trailing" secondItem="3ah-Qv-k4c" secondAttribute="trailing" constant="79" id="FXh-Ss-Gxx"/>
+                            <constraint firstItem="3ah-Qv-k4c" firstAttribute="leading" secondItem="xbh-9M-rnC" secondAttribute="trailing" constant="13" id="G6Z-zT-lx9"/>
+                            <constraint firstItem="gqL-Tj-GFV" firstAttribute="top" secondItem="3ah-Qv-k4c" secondAttribute="bottom" constant="19.5" id="GDL-U2-dNm"/>
+                            <constraint firstItem="NQi-cb-g7Q" firstAttribute="top" secondItem="ZaP-Wi-4XM" secondAttribute="top" constant="14" id="Go4-MM-UBm"/>
+                            <constraint firstItem="1VS-eO-qjH" firstAttribute="top" secondItem="gqL-Tj-GFV" secondAttribute="bottom" constant="15" id="Hx1-tF-7rT"/>
+                            <constraint firstItem="u9e-IM-zBf" firstAttribute="leading" secondItem="gqL-Tj-GFV" secondAttribute="leading" id="IjG-0b-ZaP"/>
+                            <constraint firstItem="xbh-9M-rnC" firstAttribute="centerY" secondItem="3ah-Qv-k4c" secondAttribute="centerY" id="Jcr-lV-esf"/>
+                            <constraint firstItem="NQi-cb-g7Q" firstAttribute="leading" secondItem="ZaP-Wi-4XM" secondAttribute="leading" constant="109" id="N6D-VJ-7yl"/>
+                            <constraint firstItem="ZaP-Wi-4XM" firstAttribute="bottom" secondItem="1VS-eO-qjH" secondAttribute="bottom" constant="20" id="W2p-jJ-RnM"/>
+                            <constraint firstItem="ZaP-Wi-4XM" firstAttribute="trailing" secondItem="u9e-IM-zBf" secondAttribute="trailing" constant="28" id="eVk-Ji-xSX"/>
+                            <constraint firstItem="u9e-IM-zBf" firstAttribute="trailing" secondItem="gqL-Tj-GFV" secondAttribute="trailing" id="fuw-uM-no4"/>
+                            <constraint firstItem="gqL-Tj-GFV" firstAttribute="top" secondItem="xbh-9M-rnC" secondAttribute="bottom" constant="8" symbolic="YES" id="iLt-hh-kKH"/>
+                            <constraint firstItem="ZaP-Wi-4XM" firstAttribute="trailing" secondItem="NQi-cb-g7Q" secondAttribute="trailing" constant="97" id="sOa-XE-QRT"/>
+                            <constraint firstItem="xbh-9M-rnC" firstAttribute="leading" secondItem="ZaP-Wi-4XM" secondAttribute="leading" constant="77" id="vL0-KB-sMz"/>
+                            <constraint firstItem="1VS-eO-qjH" firstAttribute="leading" secondItem="ZaP-Wi-4XM" secondAttribute="leading" constant="30" id="vlh-vP-Aki"/>
+                            <constraint firstItem="xbh-9M-rnC" firstAttribute="top" secondItem="u9e-IM-zBf" secondAttribute="bottom" constant="18" id="xeW-g7-PNK"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Bulk" image="square.and.arrow.up.fill" catalog="system" selectedImage="square.and.arrow.up.fill" id="0Lb-2n-a3N" customClass="Bulk">
+                        <color key="badgeColor" red="0.9469479918" green="0.40316635369999998" blue="0.53162324429999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="coordinatesTextView" destination="gqL-Tj-GFV" id="uhA-zv-Z5a"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wng-Ji-JXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1127.536231884058" y="1223.4375"/>
+        </scene>
+        <!--Info View Controller-->
+        <scene sceneID="ZLk-vC-1pl">
+            <objects>
+                <viewController id="leB-lc-x5W" customClass="InfoViewController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bSG-hq-gDi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="close" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LsE-zE-e60">
+                                <rect key="frame" x="20" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="JfN-YT-8qC"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="closeButton:" destination="leB-lc-x5W" eventType="touchUpInside" id="Adb-me-dRG"/>
+                                    <action selector="closeButton:" destination="6UC-FT-uDs" eventType="touchUpInside" id="yVm-Mw-pL0"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addressdetails" translatesAutoresizingMaskIntoConstraints="NO" id="fx6-rP-h9W">
+                                <rect key="frame" x="20" y="80" width="374" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="149" id="JuU-Zb-1nX"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HpH-p6-shn">
+                                <rect key="frame" x="20" y="271" width="374" height="356"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Please reformat your cvs file like this scheme. Header's first column should be "Address Name" and second column should be "Address". 
+
+
+Please don't add more than 200 adresses because that can cause geocode problems. 
+
+
+If you want to use geocoder for more than 200 addresses please send an email to cankinav@gmail.com to use geocoder on server side.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vsZ-Ri-UzV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fx6-rP-h9W" firstAttribute="leading" secondItem="LsE-zE-e60" secondAttribute="leading" id="DAZ-Xg-70D"/>
+                            <constraint firstItem="fx6-rP-h9W" firstAttribute="top" secondItem="LsE-zE-e60" secondAttribute="bottom" constant="30" id="Rfu-B7-o7D"/>
+                            <constraint firstItem="HpH-p6-shn" firstAttribute="top" secondItem="fx6-rP-h9W" secondAttribute="bottom" constant="42" id="Y4X-NW-AGp"/>
+                            <constraint firstItem="LsE-zE-e60" firstAttribute="leading" secondItem="vsZ-Ri-UzV" secondAttribute="leading" constant="20" id="aZp-jt-Cgv"/>
+                            <constraint firstItem="vsZ-Ri-UzV" firstAttribute="bottom" secondItem="HpH-p6-shn" secondAttribute="bottom" constant="181" id="dGL-hk-C4R"/>
+                            <constraint firstItem="fx6-rP-h9W" firstAttribute="trailing" secondItem="bSG-hq-gDi" secondAttribute="trailingMargin" id="dTw-CL-yf3"/>
+                            <constraint firstItem="LsE-zE-e60" firstAttribute="top" secondItem="vsZ-Ri-UzV" secondAttribute="top" constant="20" id="hPS-uX-GAc"/>
+                            <constraint firstItem="fx6-rP-h9W" firstAttribute="trailing" secondItem="HpH-p6-shn" secondAttribute="trailing" id="rVF-IP-iy3"/>
+                            <constraint firstItem="fx6-rP-h9W" firstAttribute="leading" secondItem="HpH-p6-shn" secondAttribute="leading" id="zZA-a4-Loc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="3pM-26-xIe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dVH-em-GxY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="6UC-FT-uDs" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1914.4927536231885" y="1238.1696428571429"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ert-TA-sfz">
+            <objects>
+                <viewController id="TDi-xb-8MK" customClass="ViewController" customModule="geocoder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ao3-6L-uau">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0qe-Ag-czb">
+                                <rect key="frame" x="34" y="229" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="IiE-oc-VZH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKa-uY-aS9">
+                                <rect key="frame" x="34" y="309" width="354" height="50"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xfN-I3-aTA"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Convert"/>
+                                <connections>
+                                    <action selector="convertCoordinate:" destination="TDi-xb-8MK" eventType="touchUpInside" id="Lmd-Gd-xud"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="DHT-vU-aJJ">
+                                <rect key="frame" x="0.0" y="469" width="414" height="344"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coordinate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXB-oa-wX8">
+                                <rect key="frame" x="165" y="399" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="cnl-Qv-wWs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geocoder logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="373-QH-am4">
+                                <rect key="frame" x="107" y="67" width="208" height="100"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HWU-Ml-5TD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RXB-oa-wX8" firstAttribute="top" secondItem="LKa-uY-aS9" secondAttribute="bottom" constant="40" id="94r-1H-BKe"/>
+                            <constraint firstItem="0qe-Ag-czb" firstAttribute="leading" secondItem="HWU-Ml-5TD" secondAttribute="leading" constant="34" id="AT9-Sc-Obp"/>
+                            <constraint firstItem="0qe-Ag-czb" firstAttribute="trailing" secondItem="LKa-uY-aS9" secondAttribute="trailing" id="AXR-PW-aq8"/>
+                            <constraint firstItem="RXB-oa-wX8" firstAttribute="centerX" secondItem="Ao3-6L-uau" secondAttribute="centerX" id="EHt-Dy-YNw"/>
+                            <constraint firstItem="373-QH-am4" firstAttribute="leading" secondItem="HWU-Ml-5TD" secondAttribute="leading" constant="107" id="J2w-zJ-JIv"/>
+                            <constraint firstItem="DHT-vU-aJJ" firstAttribute="top" secondItem="RXB-oa-wX8" secondAttribute="bottom" constant="40" id="MS5-8m-YeX"/>
+                            <constraint firstItem="0qe-Ag-czb" firstAttribute="top" secondItem="373-QH-am4" secondAttribute="bottom" constant="62" id="Opj-zL-5gy"/>
+                            <constraint firstItem="0qe-Ag-czb" firstAttribute="top" secondItem="HWU-Ml-5TD" secondAttribute="top" constant="185" id="SG5-6R-aIO"/>
+                            <constraint firstItem="0qe-Ag-czb" firstAttribute="leading" secondItem="LKa-uY-aS9" secondAttribute="leading" id="TTc-WU-UVu"/>
+                            <constraint firstItem="HWU-Ml-5TD" firstAttribute="trailing" secondItem="0qe-Ag-czb" secondAttribute="trailing" constant="26" id="X6h-mn-UM1"/>
+                            <constraint firstItem="373-QH-am4" firstAttribute="centerX" secondItem="0qe-Ag-czb" secondAttribute="centerX" id="XWU-9D-Xmj"/>
+                            <constraint firstItem="DHT-vU-aJJ" firstAttribute="leading" secondItem="HWU-Ml-5TD" secondAttribute="leading" id="Xd9-Lg-62Z"/>
+                            <constraint firstItem="DHT-vU-aJJ" firstAttribute="bottom" secondItem="HWU-Ml-5TD" secondAttribute="bottom" id="bY2-uy-9vX"/>
+                            <constraint firstItem="LKa-uY-aS9" firstAttribute="top" secondItem="0qe-Ag-czb" secondAttribute="bottom" constant="30" id="oon-sp-1Mw"/>
+                            <constraint firstItem="DHT-vU-aJJ" firstAttribute="trailing" secondItem="HWU-Ml-5TD" secondAttribute="trailing" id="sAO-hH-1WY"/>
+                            <constraint firstItem="373-QH-am4" firstAttribute="top" secondItem="HWU-Ml-5TD" secondAttribute="top" constant="23" id="z7J-f2-ta9"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="on1-wb-xzd">
+                        <color key="badgeColor" red="0.9469479918" green="0.40316635369999998" blue="0.53162324429999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="CoordinateTextField" destination="RXB-oa-wX8" id="Sfm-cI-VgO"/>
+                        <outlet property="addressTextField" destination="0qe-Ag-czb" id="seD-p1-4qa"/>
+                        <outlet property="mapView" destination="DHT-vU-aJJ" id="hWu-xh-Zu3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yba-ZT-cxJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111.5942028985507" y="555.80357142857144"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="iBI-go-ZSd">
+            <objects>
+                <tabBarController id="nYY-yJ-aGS" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aCi-Vh-vVZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" red="0.9469479918" green="0.40316635369999998" blue="0.53162324429999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.0" green="0.70554184909999995" blue="0.89131349329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="TDi-xb-8MK" kind="relationship" relationship="viewControllers" id="3MQ-Jy-YMQ"/>
+                        <segue destination="gNX-pf-PGi" kind="relationship" relationship="viewControllers" id="cCr-pR-boO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNI-H0-kOY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="225" y="860"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addressdetails" width="344" height="77"/>
+        <image name="geocoder logo" width="311" height="88"/>
+        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
